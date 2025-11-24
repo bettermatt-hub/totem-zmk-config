@@ -36,9 +36,6 @@ Function keys, Bluetooth device switching, and ZMK Studio unlock.
 
 ![Totem Keymap](totem-keymap.svg)
 
-⚠️ **IMPORTANT:** The dialog has grown too large to fit in the context window. Some non-pinned messages have been removed from the start of the dialog. Originally there were 279 messages; in the truncated dialog there are 262 messages.
-
-
 ## Installation
 
 1. Fork this repository

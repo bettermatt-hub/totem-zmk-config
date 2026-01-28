@@ -66,3 +66,22 @@ Function keys, Bluetooth device switching, and ZMK Studio unlock.
 ### Battery Monitoring
 Configured for split battery level reporting to support peripheral battery monitoring apps.
 
+## Changing the Keyboard Name
+
+To change the Bluetooth device name:
+
+1. Edit `config/totem.conf` and set:
+   ```
+   CONFIG_ZMK_KEYBOARD_NAME="Your Custom Name"
+   ```
+
+2. Build the firmware (GitHub Actions will create 3 files including `settings_reset`)
+
+3. Flash the firmware:
+   - Flash `settings_reset-seeeduino_xiao_ble-zmk.uf2` to both halves 
+   - Flash `totem_left-seeeduino_xiao_ble-zmk.uf2` to left half
+   - Flash `totem_right-seeeduino_xiao_ble-zmk.uf2` to right half
+
+4. Clear Bluetooth bonds on the keyboard using `BT_CLR_ALL`
+
+Note: The settings reset is required because the keyboard name is stored in persistent memory.
